@@ -1,0 +1,32 @@
+p {
+    background-color: pink;
+    /* position: static;  Por defecto. Top, left, right y bottom no surge efecto */
+    
+}
+/* p:nth-child(2) {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    bottom: 0;
+    right: 10px;
+    width: 150px;
+    background-color: yellow;
+    margin: 0; */
+    /* relative: los valores top, right, left y bottom son relativos 
+    a la posición actual del elemento. Conserva el espacio original 
+    del elemento. El ancho del elemento se mantiene flexible */
+    /* fixed:los valores top, right, left y bottom se calculan relativos a las dimensiones 
+    la venta del navegador. El espacio del elemento no se mantiene (los otros párrafos se 
+    recolocan, por ejemplo. El ancho del elemento deja de ser flexible, se reduce 
+    al mínimo indispensable. En caso de conflicto: gana left sobre right y top sobre bottom */
+
+h2 {
+    position: sticky; /* El elemento se queda pegado en la posición que le marquemos. 
+    Lo hace mientras dure el <padre> al que pertenece, en este caso el <section>. Puede decirse 
+    que funciona entre static y fixed dependiendo del tamño de la ventana */
+    top: 0;
+    background-color: yellow;
+}
+/* absolute: los valores top, right, left y bottom son relativos a las dimensiones del 
+primer elemento padre que tenga una posición diferente al static. Si no hay ninguno, 
+coge el html  */

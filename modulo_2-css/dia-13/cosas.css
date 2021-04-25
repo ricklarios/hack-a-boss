@@ -1,0 +1,53 @@
+:root {
+    /* --small: 14px; */
+    --small: 4vw; /* Podemos hacer q la tipografía crezca con la centana */
+    --ratio: 1.2;
+    --medium: calc(var(--small) * var(--ratio));
+    --big: calc(var(--medium) * var(--ratio));
+}
+
+body {
+    margin: 0;
+}
+
+.welcome {
+    /* font-size: min(15vw, 100px); */
+    font-size: clamp(50px, 15vw, 250px); /* Muy útil para limitar el tamaño min y 
+    max de las tipografías y como crece. Puede aplicarse a una variable */
+    text-align: center;
+    background-color: yellow;
+
+}
+
+.hola {
+    width: calc(100% - 200px); /* con "calc()" hacemos un cálculo con las variables que queramos */
+    height: 300px;
+    background-color: yellow;
+}
+.flotante {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.small {
+    font-size: var(--small);
+}
+.medium {
+    font-size: var(--medium);
+}
+.big {
+    font-size: var(--big);
+}
+
+@media (min-width: 500px) { 
+    /* con "print" la condición se cumple solo al imprimir / con "screen" solo cuando se muestra en pantalla */
+    /* Permite aplicar distintas reglas en determiandas condiciones, dispositivos, etc. */
+    .etiqueta {
+        background-color: blue; /* Esto se ejecutará si se cumple la condición de arriba: a partir de 500px */
+    }
+
+}

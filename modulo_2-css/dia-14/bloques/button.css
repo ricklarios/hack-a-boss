@@ -1,0 +1,29 @@
+.button {
+    background: transparent;
+    border: solid 2px blue;
+    padding: 1em;
+    display: inline-block;
+    font-family: arial;
+    font-size: 16px;
+    text-decoration: none;
+    color: blue;
+    border-radius: 8px;
+}
+
+.button__icon {
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.button__text {
+    
+    font-weight: bold;
+
+}
+.button__tect--upper {
+    text-transform: uppercase;
+}
+
+.button--main {
+    background: blue;
+    color: white;
+}  /* Esto sería un modificador del bloque principal */

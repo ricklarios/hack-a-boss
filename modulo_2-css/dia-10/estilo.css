@@ -1,0 +1,56 @@
+.degradado {
+    width: 1000px;
+    height: 400px;
+    border: solid 2px black;
+    background-image: linear-gradient(to right, red 50%, yellow, rgb(3, 248, 248));
+    /* background-size: 100px 100px; 
+    background-repeat: repeat; */
+
+
+}
+.fondo {
+    /* background: pink url("./fondo.png") no-repeat center center / contain; Lo anterior puede definirse individualmente: 
+    background-repeat: no-repeat;
+    background-position: right 200px top 0%;
+    background-size: auto 3000px;
+    background-size: cover;
+    background-size: contain;
+    background-position: center center; */
+    background-color: pink;
+    /* background-image: url("./ilustracion.png"), url("./fondo.png"); Las imagenes las cargamos
+    de la capa superior a las inferiores separadas por comas */
+    background-size: 500px auto, cover; /* Para dar valor a cada imgen los separamos igualmente por comas */
+    background-repeat: repeat-x, no-repeat; /* Para dar valor a cada imgen los separamos igualmente por comas */
+    background-position: center bottom, center top; /* Para dar valor a cada imgen los separamos igualmente por comas */
+    /* Todo esto puede resumirse también en una sola línea:
+    background:  pink  url("./ilustracion.png") repeat-x center bottom / 500px auto, url("..") no-repeat etc... DEMASIADO COMPLICADO!!! */
+    background-image: url("./ilustracion.png"), linear-gradient(blue, red);
+    background-blend-mode: normal;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    height: 500px;
+}
+
+
+.imagen {
+    background-image: url("./ilustracion.png");
+    border: solid 2px black;
+    width: 500px;
+    background-color: rgb(156, 156, 236);
+    color: white;
+    font-size: 2em;
+    box-shadow: inset 0px 0px 20px 20px black; /*  Con inset la sombra la hace hacia dentro / Podemos poner
+    varias sombras interiores y exteriores añadiendolas con "," */
+}
+.imagen:hover {
+    background-size: 60% auto;
+}
+.imagen img {
+    width: 100%;
+}
+.imagen figcaption {
+    padding: 2em;
+    background-image: linear-gradient(to top, black, transparent);
+    mix-blend-mode: screen;
+}

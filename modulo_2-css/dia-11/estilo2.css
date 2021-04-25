@@ -1,0 +1,29 @@
+.contenedor2 {
+    display: flex;
+    background-color: lightgray;
+    justify-content: flex-start;
+    gap: 5px; /* para separar los bloques y evitar que se toquen, muy útil */
+    flex-wrap: wrap; /* Continúa por una nueva fila por abajo cuando no puede contraerse más */
+}
+.contenedor2 p {
+    background-color: yellow;
+    border: solid 1px;
+    margin: 0;
+}
+.contenedor2 p:nth-child(1) {
+    /* order: 0; */
+    height: 100px;
+    background-color: blue;
+    flex-grow: 1;
+    flex-basis: 100px;
+    flex-shrink: 0;
+}
+.contenedor2 p:nth-child(2) {
+        background-color: red;
+        flex-grow: 1;
+        flex-basis: 100px;
+        flex-shrink: 0;
+} 
+/* Flex-basis: npx; el grow se aplica a partir del tamaño que le indicamos. */
+/* Si añadimos flex-shrink: 0; no se encogerán por debajo su flex-basis */
+/* Todo esto puede unificarse en la propiedad flex: grow shrink basis ; */

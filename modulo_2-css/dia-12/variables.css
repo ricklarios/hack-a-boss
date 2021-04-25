@@ -1,0 +1,48 @@
+/* Hay propiedades que se heredan (como el color) y otras que no (como un borde) 
+
+.article {
+    color: brown; /* El color se hereda
+    /* border: solid 1px black; El borde no se hereda 
+}*/
+
+/* .article h1 {
+    border: inherit; /* Formzamos que herede un valor del padre 
+} */
+/*
+.article h1 {
+    color: blue;
+}
+.article section {
+    border: solid 1px blue;
+    padding: 2em;
+    box-shadow: -5px 5px 0 brown;
+}
+
+ CUSTOM PROPERTIES: Podemos usar abreviaturas para variables que 
+usamos mucho a lo largo del css. Empiezan su nombre por dos guiones -- */
+
+.article {
+    --color-principal: green;
+    --color-secundario: blue;
+
+    color: var(--color-principal);
+    
+}
+.article h1 {
+    color: var(--color-secundario);
+}
+.article section {
+    border: solid 1px var(--color-secundario);
+    padding: 2em;
+    box-shadow: -5px 5px 0 var(--color-principal);
+}
+/* La forma de que las variables estén disponible sen todo el documento, 
+por encima del propio HTML, es con la pseudoetiqueta :root */
+
+:root {
+    --color-principal: green;
+    --color-secundario: blue;
+}
+aside {
+    color: var(--color-principal);
+}

@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+   /* grid-template-columns: 200px 200px 200px;   Le decimos que se distribuya en 3 columnas de 200px cada una */
+    grid-template-columns: repeat(auto-fill, 200px); /* Crea o elimina columnas para que se coloquen los elementos que tenemos */
+    grid-template-rows: 200px 200px;
+    background-color: yellow;
+    align-items: center; /* Alinéa en vetical los elementos (items) donde le digamos dentro del GRID*/
+    justify-items: center; /* Justifica en horizontal los elementos (items) donde le digamos dentro del GRID*/
+    /* place-items: center;  Unifica align y justify */
+    height: 500px;
+    align-content: center; /* Alinéa en vetical el contenido (GRID) donde le digamos dentro del padre*/
+    justify-content: space-around; /* Justifica el contenido (GRID) donde le digamos dentro del padre*/
+    /* place-content: center;  Unifica align y justify */
+}
+p {
+    background-color: pink;
+    margin: 0;
+    width: 100px;
+}
+img {
+    width: 100%;
+}
+p:nth-child(2) {
+    background-color: orange;
+    align-self: stretch; /* Alinéa un item en concreto, por encima de lo que le hayamos dicho antes */
+    justify-self: center; /* Justifica un item en concreto, por encima de lo que le hayamos dicho antes */
+    /* place-self: stretch center; Haría lo mismo que lo anterior */
+}

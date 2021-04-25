@@ -1,0 +1,67 @@
+.contenedor {
+    display: flex;
+    /* flex-direction: column; Para nosotros por defecto es row */
+    /* flex-direction: row-reverse;  Los ordena del revés, empezando por la izq e 
+    invirtiendo el orden. TAmbién column-reverse */
+    background-color: orange;
+     /* align-items: center;  Igual que en GRID */
+     /* justify-content: space-evenly;  Igual que en GRID */
+    justify-content: flex-start; 
+}
+.contenedor p {
+    background-color: yellow;
+    border: solid 1px;
+    margin: 0;
+ 
+}
+/* .contenedor p:nth-child(2) { 
+     order: 1; Reordenamos los elementos igual que en GRID. Los elementos 
+    están todos en posición 0, es decir, en su posición original respecto al html*/
+   
+    /* align-self: flex-start; atmbién funciona igual que en GRID
+} */
+.contenedor p:nth-child(1) {
+    /* order: 0; */
+    height: 100px;
+    background-color: blue;
+    align-self: flex-end;
+    flex-grow: 1;
+
+}
+.contenedor p:nth-child(2) {
+    background-color: red;
+    flex-grow: 4;
+    /* Con flex-grow indicamos cuantas "porciones" del espacio sobrante ocupa 
+    cada item */
+
+}
+.contenedor p:nth-child(3) {
+    background-color: green;
+    flex-shrink: 1; /* Capacidad de contraerse. Por defecto su valor es 1 para todos los elementos. 
+    Si le damos valor 0 a un elemento, ya no se encoje */
+}
+.contenedor2 {
+    display: flex;
+}
+.contenedor2 p {
+    background-color: yellow;
+    border: solid 1px;
+    margin: 0;
+}
+.contenedor2 p:nth-child(1) {
+    /* order: 0; */
+    height: 100px;
+    background-color: blue;
+    flex-grow: 1;
+    flex-basis: 100px;
+    flex-shrink: 0;
+}
+    .contenedor2 p:nth-child(2) {
+        background-color: red;
+        flex-grow: 1;
+        flex-basis: 100px;
+        flex-shrink: 0;
+}
+/* Flex-basis: npx; el grow se aplica a partir del tamaño que le indicamos. */
+/* Si añadimos flex-shrink: 0; no se encogerán por debajo su flex-basis */
+/* Todo esto puede unificarse en la propiedad flex: grow shrink basis ; */

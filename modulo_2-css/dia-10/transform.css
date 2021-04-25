@@ -1,0 +1,18 @@
+/* .title {
+    background-color: pink;
+    width: max-content;
+     transform: scale(1, 2) rotate(10deg); "transform " Transforma la visualización de un elemento, pero mantiene el elemento original 
+     transform: scaleX(0.5); 
+    transform: translate(100px, 200px);  Desplaza el elemento, también funciona translateX o Y 
+    transform-origin: center center; Por defecto trabaja en center center 
+}*/
+    
+.seccion {
+    perspective: 500px;
+}
+.title {
+    background-color: pink;
+    width: max-content;
+    transform-origin: left top;
+    transform: rotateY(90deg) translate(100px) scaleZ(2);
+}

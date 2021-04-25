@@ -1,0 +1,13 @@
+
+@font-face {
+    font-family: "Tipo Titulo";
+    src: url("/dia-7/fonts/Roboto-Regular.woff2") format("woff2"), 
+    url("/dia-7/fonts/Roboto-Regular.woff") format("woff");
+}
+
+h1 {
+    color: rebeccapurple;
+    font-family: "Tipo Titulo", sans-serif;
+    font-size: 5rem;
+    text-shadow: 3px 3px 5px black;
+}

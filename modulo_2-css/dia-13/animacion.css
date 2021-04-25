@@ -1,0 +1,45 @@
+.caja {
+    background-color: pink;
+    padding: 1em;
+    width: 300px;
+    height: 300px;
+    animation-name: prueba;
+    animation-duration: 6s;
+    animation-delay: 2s;
+    animation-direction: reverse; /* Con "reverse" lo haría hacía atrás, con "alternate" va adelante y atrás */
+    animation-timing-function: ease;  /* "Linear" por defecto, o funciones igual que en transition */
+     /* animation-iteration-count: 2; Por defecto es 1, la ejecuta 1 vez / Con "infitite" hace un loop infinito */
+    animation-fill-mode: both; /* Modo de relleno de antes y después de la animación. "none" por defecto */
+}
+.caja:hover {
+    animation-play-state: paused; /* Pausa la animación, en este caso por un hover / Running haría lo contrario*/
+}
+
+@keyframes prueba {
+    0% {
+        background-color: blue;
+        transform: translate(0px,0px);
+    }
+    50% {
+        background-color: green;
+        transform: translate(100px,100px);
+    }
+    100% {
+        background-color: red;
+        transform: translate(50px,50px) rotate(45deg);
+    }
+    /* Puedo separar o unificar los cambios en distintas líneas independientes, o cambiar el orden, no afecta. Por ej.:
+    0%, 100% {
+        background-color: blue;
+    }
+    50% {
+        transform: traslate(100px,100px);
+    }
+    0% {
+         transform: traslate(0px,0px);
+    }
+    100% {
+        transform: translate(50px,50px) rotate(45deg);
+    }*/
+}
+

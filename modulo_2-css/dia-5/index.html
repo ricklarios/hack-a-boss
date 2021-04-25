@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularios HTML</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <form method="GET" class="fomularios">
+        <fieldset>
+            <legend>Datos Primcipales</legend>
+            <label for="campo_nombre">Introduce tu nombre:</label>
+            <input list="sugerencias_nombres" id="campo_nombre" type="text" name="nombre" class="input">
+            <datalist id="sugerencias_nombres">
+                <option>Pepe</option>
+                <option>Juan</option>
+                <option>Manuel</option>    
+            </datalist>
+    
+            <br>
+                <label>Aquí tu comentario:
+                <input value="Comentario de ejemplo" type=text minlength="5" maxlength="500" name="comentario">
+                </label>
+            <br>
+            <label>Aquí tu comentario (desactivado):
+                <input disabled value="Comentario de ejemplo" type=text minlength="5" maxlength="500" name="comentario">
+            </label>
+            <br>
+            
+            <label>
+                <input checked type="checkbox" name="aceptar">Aceptar los términos
+            </label>
+        </fieldset>
+        <p>
+            <label>
+                <input type="radio" name="sexo"> Mujer
+                
+            </label>
+            <label>
+                <input type="radio" name="sexo"> Hombre
+            </label>
+           
+        </p>
+
+        <p>
+            <label>
+                Edad:
+                <input type="number" step="0.5" min="0" max="110" name="edad">
+            </label>
+        </p>
+        <p>
+            <label>
+                Password:
+                <input type="password" name="password" required>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Rango favorito:
+                <input type="range" name="rango">
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Fecha y hora:
+                <input min="2021-04-03T00:00" max="2021-04-29T00:00" type="datetime-local" name="cumpleaños">
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Fecha y hora:
+                <input min="2021-04-03" max="2021-04-29" type="date" name="cumpleaños2">
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Fecha y hora:
+                <input min="00:00" max="20:00" type="time" name="cumpleaños3">
+            </label>
+        </p>
+        <p>
+            <label>
+                Semana:
+                <input type="week" name="semana">
+            </label>
+        </p>
+        <p>
+            <label>
+                Mes:
+                <input type="month" name="mes">
+            </label>
+        </p>
+        <p>
+
+            <label>
+                Buscar: 
+                <input type="search" name="buscar">
+            </label>
+        </p>
+
+        <p>
+
+            <label>
+                Número de teléfono:
+                <input type="tel" name="telefono">
+            </label>
+        </p>
+
+        <p>
+            <label>
+            Email:
+            <input type="email" name="email">
+            </label>
+        </p>
+
+        <p>
+            <label>
+            Página web:
+            <input type="url" name="web">
+            </label>
+        </p>
+        <p>
+            <label>
+                Comentario largo:
+                <textarea minlength="10" maxlength="500" name="comentario_largo" class="comentario_largo">Hola Caracola
+                </textarea>
+            </label>
+        </p>
+
+        <p>
+            <label>
+            Color Favorito:
+            <select name="color" class="input">
+            <optgroup label="Color favoritos">
+                <option value="red">Rojo</option>
+                <option value="green">Verde</option>
+                <option value="yellow">Amarillo</option>
+                <option value="blue">Blue</option>
+            </optgroup>
+            <optgroup label="Colores secundarios">
+                <option value="magenta">Magenta</option>
+                <option value="pink">Rosa</option>
+            </optgroup>
+            </select>
+            </label>
+        </p>
+
+        <p>
+            <label>
+            Color:
+            <input type="color" name="color2">
+            </label>
+        </p>
+
+    <footer class="footer">
+        <button type="summit" class="button">Enviar</button>
+        <button type="reset" class="button">Resetar</button>
+        <button type="button" class="button">Haz click</button>
+    </footer>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+.avatar {
+    display: inline-block;
+    align-items: center;
+    gap: 20px;
+
+}
+.avatar__img {
+    display: block;
+}
+.avatar__img--rounded {
+    border-radius: 50%;
+}
+.avatar__username {
+    display: block;
+}

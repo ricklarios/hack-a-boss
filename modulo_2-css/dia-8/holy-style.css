@@ -1,0 +1,29 @@
+.holygrail {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: [inicio] 1fr [medio] 1fr [fin];
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: "header header" 
+                            "aside nav"
+                            "aside article"
+                            "footer footer";
+}
+header, nav, article, aside, footer {
+    background-color: orange;
+}
+header {
+    grid-area: header;
+}
+nav {
+    grid-area: nav;
+}
+article {
+    grid-area: article;
+}
+aside {
+    grid-area: aside;
+}
+footer {
+    grid-area: footer;
+}

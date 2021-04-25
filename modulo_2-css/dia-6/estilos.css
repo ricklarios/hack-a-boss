@@ -1,0 +1,86 @@
+/* /* .hola {
+    background-color: yellow;
+}
+.adios {
+    background-color: pink;
+}
+ a[href^="http://google.com"] {
+    border: solid 2px blue;
+}
+a[href^="http://"] {
+    border: solid 2px blue;
+}
+a[href$=".pdf"] {
+    border: solid 2px red;
+}
+a[href*="google"] {
+    border: solid 2px red;
+    background-color: black;
+}
+a[download] {
+    background-color: blueviolet;
+}
+a[class~="hola"] {
+    background-color: greenyellow; 
+}
+
+a[hreflang|="en"] {
+    border: solid 2px blue;
+} */
+/* li:first-child {
+    background: pink;
+}
+li:nth-child(2) {
+    background: blue;
+}
+li:nth-child(4) {
+    background: green;
+}
+li:last-child {
+    background: red;
+}
+li:nth-child(even) {
+    color: white;
+} Números pares
+li:nth-child(odd) {
+    background: pink;
+}  Números impares 
+li:nth-child(3n) { 
+    background: pink;
+ } Multiplica 3 por n
+ li:nth-last-child(3n) { 
+    background: pink;
+ }  Empieza desde el final 
+ body > p:nth-child(3n) {
+     background: pink;
+ }
+ p:first-line {
+     color: red;
+ } */
+ p:first-letter {
+    color: blue;
+    font-size: 300%;
+}
+a {
+    color: green;
+}
+a:visited {
+    color: blue;
+}
+a:hover {
+    color: pink;
+}
+a:focus {
+    background: gray;
+}
+a:active {
+    background: black;
+    color: white;
+}
+p::selection {
+    background-color: blue;
+    color: white;
+}
+p::placeholder {
+    color: red;
+}
