@@ -1,0 +1,8 @@
+alumnos(#id, nombre, apellidos)
+profesores(#id, nombre, apellidos, DNI, teléfono, email)
+asignaturas(#id, nombre, nº de horas, -id_asignaturas)
+cursos(#id, turno, código, id_aula)
+aulas(#id, número, capacidad)
+teléfonos(#id, telefono, -id_profesores)
+alumnos_asignaturas(#(-id_alumno, -id_asignatura))
+asignaturas_cursos(#(-id_asignatura, -id_curso))
