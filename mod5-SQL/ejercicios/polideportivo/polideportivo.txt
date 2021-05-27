@@ -1,0 +1,35 @@
+usuarios(
+    #id, 
+    nombre, 
+    apellidos, 
+    email, 
+    DNI, 
+    teléfono, 
+    fecha_nacimineto
+);
+polideportivos(
+    #id, 
+    nombre, 
+    dirección, 
+    extensión
+);
+pistas(
+    #id, 
+    precio, 
+    operativa, 
+    tipo, 
+    código, 
+    -id_polideportivo
+);
+reservas(
+    #id, 
+    fecha_reserva, 
+    fecha_creación, 
+    precio, 
+    última_reserva, 
+    -id_pista
+);
+usuarios_reservas(
+    #(-id_usuarios, -id_reservas)
+);
+

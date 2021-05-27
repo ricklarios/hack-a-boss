@@ -1,0 +1,69 @@
+USE escuela;
+
+SET FOREIGN_KEY_CHECKS=0;
+
+CREATE TABLE alumnos (
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+nombre VARCHAR(20) NOT NULL,
+apellidos VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE profesores (
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+nombre VARCHAR(20) NOT NULL,
+apellidos VARCHAR(50) NOT NULL,
+dni VARCHAR(15) NOT NULL UNIQUE,
+email VARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE asignaturas (
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+nombre VARCHAR(20) NOT NULL,
+horas SMALLINT UNSIGNED NOT NULL,
+id_profesor INT UNSIGNED,
+FOREIGN KEY (id_profesor) REFERENCES profesores (id)
+);
+
+CREATE TABLE cursos (
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+turno ENUM('mañana', 'tarde') NOT NULL,
+código VARCHAR(10) UNIQUE NOT NULL,
+id_aula INT UNSIGNED,
+FOREIGN KEY (id_aula) REFERENCES aulas (id)
+);
+
+CREATE TABLE aulas (
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+número VARCHAR(5),
+capacidad TINYINT UNSIGNED NOT NULL
+);
+
+CREATE TABLE telefonos (
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+telefono VARCHAR(15),
+id_profesor INT UNSIGNED,
+FOREIGN KEY (id_profesor) REFERENCES profesores (id)
+);
+
+CREATE TABLE alumnos_asignaturas (
+id_alumno INT UNSIGNED, 
+FOREIGN KEY (id_alumno) REFERENCES alumnos (id),
+id_asignatura INT UNSIGNED,
+FOREIGN KEY (id_asignatura) REFERENCES asignaturas (id),
+PRIMARY KEY (id_alumno, id_asignatura)
+);
+
+CREATE TABLE alumnos_cursos (
+id_asignatura INT UNSIGNED, 
+FOREIGN KEY (id_asignatura) REFERENCES asignaturas (id),
+id_curso INT UNSIGNED,
+FOREIGN KEY (id_curso) REFERENCES cursos (id)
+);
+
+
+
+SET FOREIGN_KEY_CHECKS=1;
+
+
+
+
