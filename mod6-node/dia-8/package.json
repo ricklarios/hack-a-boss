@@ -1,0 +1,28 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev1": "nodemon ejercicio-1.js",
+    "dev2": "nodemon ejercicio-2.js",
+    "dev3": "nodemon ejercicio-3.js",
+    "dev4": "nodemon ejercicio-4.js",
+    "dev5": "nodemon ejercicio-5.js",
+    "dev6": "nodemon ejercicio-6.js",
+    "dev7": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1"
+  }
+}
