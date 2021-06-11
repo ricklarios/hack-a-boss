@@ -1,1 +1,1 @@
-[{"id":1,"title":"Último día de curso","description":"Lorem ipsum dolor sit amet","idUser":1},{"id":2,"title":"Atún con pan!","description":"Lorem ipsum dolor sit amet","idUser":3},{"id":3,"idUser":2,"title":"Recetas con presa ibérica","description":"Lorem Ipsum"}]
+[{"id":1,"idUser":1,"title":"Recetas de cocina","description":"Paella de marisco","deleted":false},{"id":2,"idUser":2,"title":"Recetas de cocina","description":"Paella de marisco","deleted":true},{"id":3,"idUser":3,"title":"Recetas de cocina","description":"Patatas con gambones","deleted":false}]
