@@ -11,7 +11,7 @@ const getEntry = async (req, res, next) => {
         // Obtenemos la información de la entrada.
         const [entry] = await connection.query(
             `
-            SELECT entries.id, entries.place, entries.description, entries.createdAt, entries.idUser, AVG(IFNULL(entries_votes.vote, 0)) AS votes
+            SELECT entries.id, entries.place, entries.description, entries.createdAt, entries.modifiedAt, entries.idUser, AVG(IFNULL(entries_votes.vote, 0)) AS votes
             FROM entries
             LEFT JOIN entries_votes ON (entries.id = entries_votes.idEntry)
             WHERE entries.id = ?;

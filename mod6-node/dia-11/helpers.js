@@ -110,6 +110,21 @@ async function sendMail({ to, subject, body }) {
     }
 }
 
+/* 
+   ######################
+   ## Validar Esquema  ##
+   ######################
+*/
+
+async function validate(schema, data) {
+    try {
+        await schema.validateAsync(data);
+    } catch (error) {
+        error.httpStatus = 400;
+        throw error;
+    }
+}
+
 module.exports = {
     formatDate,
     getRandomValue,
@@ -117,4 +132,5 @@ module.exports = {
     deletePhoto,
     generateRandomString,
     sendMail,
+    validate,
 };

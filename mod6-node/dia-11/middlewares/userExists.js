@@ -9,7 +9,7 @@ const userExists = async (req, res, next) => {
         const { idUser } = req.params;
 
         const [user] = await connection.query(
-            `SELECT id FROM users WHERE id = ?;`,
+            `SELECT id FROM users WHERE id = ? AND deleted = 0;`,
             [idUser]
         );
         if (user.length < 1) {

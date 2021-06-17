@@ -1,9 +1,7 @@
 // POST - [/entries/:idEntry/votes] - Vota una entrada.
 
-const { errorMonitor } = require('events');
 const getDB = require('../../bbdd/db');
 const { formatDate } = require('../../helpers');
-const entryExists = require('../../middlewares/entryExists');
 
 const voteEntry = async (req, res, next) => {
     let connection;
@@ -45,7 +43,7 @@ const voteEntry = async (req, res, next) => {
         // Si la longitud de alreadyVote es mayor que 0 el usuario ya ha votado.
         if (alreadyVote.length > 0) {
             const error = new Error('Ya votaste esta entrada anterioremente');
-            errorMonitor.httpStatus = 403;
+            error.httpStatus = 403;
             throw error;
         }
 

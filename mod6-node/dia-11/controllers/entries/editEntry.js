@@ -11,21 +11,21 @@ const editEntry = async (req, res, next) => {
         // Obtenemos los datos que vamos a permitir editar: 'descripción' o 'lugar'
         const { description, place } = req.body;
         const { idEntry } = req.params;
-        const { idUser } = req.userAuth;
+        // const { idUser } = req.userAuth;
 
-        const [owner] = await connection.query(
-            `SELECT idUser FROM entries WHERE id = ?`,
-            [idEntry]
-        );
-        // Comprobamos que el que edita sea el dueño de la entrada
-        if (owner[0].idUser !== idUser) {
-            const error = new Error('No tienes permisos');
-            error.httpStatus = 401;
-            throw error;
-        }
+        // const [owner] = await connection.query(
+        //     `SELECT idUser FROM entries WHERE id = ?`,
+        //     [idEntry]
+        // );
+        // // Comprobamos que el que edita sea el dueño de la entrada
+        // if (owner[0].idUser !== idUser) {
+        //     const error = new Error('No tienes permisos');
+        //     error.httpStatus = 401;
+        //     throw error;
+        // }
 
         // Comprobamos si no hay algún dato:
-        if (!description || !place) {
+        if (!description && !place) {
             const error = new Error('Faltan campos');
             error.httpStatus = 400;
             throw error;

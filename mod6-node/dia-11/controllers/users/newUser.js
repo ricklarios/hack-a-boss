@@ -1,9 +1,11 @@
 const getDB = require('../../bbdd/db');
+const newUserSchema = require('../../schemas/newUserSchema');
 
 const {
     generateRandomString,
     sendMail,
     formatDate,
+    validate,
 } = require('../../helpers.js');
 
 const newUser = async (req, res, next) => {
@@ -11,6 +13,8 @@ const newUser = async (req, res, next) => {
 
     try {
         connection = await getDB();
+        // Validamos los datos:
+        await validate(newUserSchema, req.body);
 
         const { email, password } = req.body;
 

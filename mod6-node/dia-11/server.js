@@ -34,6 +34,8 @@ const {
     editUser,
     editUserPass,
     recoverUserPass,
+    resetUserPass,
+    deleteUser,
 } = require('./controllers/users/index.js');
 
 // Logger ('morgan' es un logger):
@@ -114,6 +116,13 @@ app.put('/users/:idUser/password', authUser, userExists, editUserPass);
 
 // Enviar correo de recuperación
 app.put('/users/password/recover', recoverUserPass);
+
+// Resetear contraseña
+app.put('/users/password/reset', resetUserPass);
+
+// Eiliminar usuario
+app.delete('/users/:idUser', authUser, userExists, deleteUser);
+
 /* 
     #######################
     ## Error & Not Found ##
