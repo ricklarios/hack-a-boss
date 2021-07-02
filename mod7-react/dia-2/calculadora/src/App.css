@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    background-color: #101f3d;
+    color: white;
+}
+
+button {
+    padding: 12px;
+}
+
+.calculadora {
+    max-width: 320px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.clear-button {
+    grid-column: span 2;
+}
+
+.sum-button {
+    grid-row: span 2;
+}
+
+.result-button {
+    grid-column: span 2;
+}

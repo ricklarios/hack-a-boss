@@ -1,0 +1,7 @@
+.screen {
+    grid-column: span 4;
+    padding: 24px;
+    background-color: white;
+    color: black;
+    text-align: end;
+}
