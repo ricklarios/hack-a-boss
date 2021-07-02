@@ -1,0 +1,29 @@
+.task-item-container {
+    background-color: orchid;
+    color: white;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 4px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-task-button {
+    background: none;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove-task-button:hover {
+    background-color: black;
+    opacity: 0.3;
+}
