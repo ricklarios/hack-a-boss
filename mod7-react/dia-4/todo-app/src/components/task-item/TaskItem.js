@@ -1,16 +1,23 @@
 import './task-item.css';
 import { BsTrash } from 'react-icons/bs';
 
-function TaskItem({ task, removeTask }) {
+function TaskItem({ task, removeTask, completeTask }) {
+    const labelStyle = {
+        textDecoration: task.isCompleted ? 'line-through' : 'none',
+    };
 
-    // const labelStyle = task.isCompleted ? 
     return (
-        <li className='task-item-container' key={task.id}>
-            <input type='checkbox' onChange={} checked={task.isCompleted} />
-            <span>{task.label}</span>
+        <li className='task-item-container'>
+            <input
+                type='checkbox'
+                checked={task.isComplete}
+                onChange={() => completeTask(task.id)}
+            />
+            <span style={labelStyle}>{task.label}</span>
+
             <button
-                className='remove-task-button'
                 onClick={() => removeTask(task.id)}
+                className='remove-task-button'
             >
                 <BsTrash />
             </button>

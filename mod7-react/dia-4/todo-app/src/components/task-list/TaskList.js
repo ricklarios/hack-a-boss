@@ -1,11 +1,16 @@
 import './tasklist.css';
 import TaskItem from '../task-item/TaskItem';
 
-function TaskList({ tasks, removeTask }) {
+function TaskList({ tasks, removeTask, completeTask }) {
     return (
         <ul className='task-list'>
             {tasks.map((task) => (
-                <TaskItem key={tasks.id} task={task} removeTask={removeTask} />
+                <TaskItem
+                    key={task.id}
+                    task={task}
+                    removeTask={removeTask}
+                    completeTask={completeTask}
+                />
             ))}
         </ul>
     );
