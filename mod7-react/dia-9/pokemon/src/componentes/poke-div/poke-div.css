@@ -1,0 +1,11 @@
+.pokemon-li-div {
+    display: flex;
+    max-width: 300px;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    height: 100px;
+    /* border: 1px solid white; */
+    border-radius: 8px;
+    background-color: rgba(128, 128, 128, 0.4);
+}

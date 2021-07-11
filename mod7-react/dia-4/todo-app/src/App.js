@@ -33,13 +33,15 @@ function App() {
     }
     // Función para añadir una tarea:
     function addNewTask(taskLabel) {
-        const newTask = {
-            id: uuidv4(),
-            label: taskLabel,
-            isCompleted: false,
-        };
-        const newTaskList = [...tasks, newTask];
-        setTasks(newTaskList);
+        if (taskLabel) {
+            const newTask = {
+                id: uuidv4(),
+                label: taskLabel,
+                isCompleted: false,
+            };
+            const newTaskList = [...tasks, newTask];
+            setTasks(newTaskList);
+        }
     }
     // Función para dar por completada una tarea:
     function completeTask(taskId) {

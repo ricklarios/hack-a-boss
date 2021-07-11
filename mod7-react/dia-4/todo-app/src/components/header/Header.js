@@ -16,6 +16,15 @@ function Header({ addNewTask }) {
         setText('');
     }
 
+    function onPressEnterKey(event) {
+        console.log('event: ', event);
+
+        if (event.key === 'Enter') {
+            addNewTask(text);
+            setText('');
+        }
+    }
+
     return (
         <header className='header-container'>
             <input
@@ -24,6 +33,7 @@ function Header({ addNewTask }) {
                 className='add-task-input'
                 placeholder='Enter new Task'
                 onChange={onChangeInput}
+                onKeyPress={onPressEnterKey}
             ></input>
             <button onClick={onClickAdd} className='add-task-button'>
                 Add
