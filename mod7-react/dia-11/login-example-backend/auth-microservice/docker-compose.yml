@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  nginx:
+    build: ./nginx
+    restart: always
+    ports:
+      - 80:80
+    links:
+      - auth-microservice
+    depends_on:
+      - auth-microservice
+
+  auth-microservice:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    hostname: auth-microservice
+    env_file: ./.env
+    ports:
+      - 7000:7000
+    depends_on:
+      - auth-hab-mongo-db
+    links:
+      - auth-hab-mongo-db
+
+  auth-hab-mongo-db:
+    image: mongo:4.0-xenial
+    hostname: auth-hab-mongo-db
+    container_name: auth-hab-mongo-db
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - auth_mongo_data:/data/db
+
+volumes:
+  auth_mongo_data:

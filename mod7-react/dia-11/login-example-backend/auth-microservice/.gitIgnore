@@ -1,0 +1,16 @@
+.DS_Store
+
+# environment variables
+**.env
+.env
+docker.env
+!example.env
+
+# node modules
+node_modules/
+
+# coverage
+coverage**/
+
+# mongo local database
+mongo_data/
