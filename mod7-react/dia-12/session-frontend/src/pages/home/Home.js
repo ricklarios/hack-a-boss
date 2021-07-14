@@ -1,8 +1,10 @@
-function Home() {
+function Home({ user }) {
     return (
         <div>
-            <nav></nav>
-            <h3>Estoy en componente Home</h3>
+            <h2>Home Page</h2>
+            {user.isUserLogged
+                ? `Logueado como usuario ${user?.user?.username}`
+                : 'Sin sesión'}
         </div>
     );
 }
